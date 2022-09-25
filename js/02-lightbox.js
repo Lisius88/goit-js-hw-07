@@ -14,11 +14,9 @@ const refs = {
 // /////////////////////////////////////////Шаблон и Рендер\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const galleryTemplate = ({ preview, original, description }) =>
-    `<div class="gallery__item">
-  <a class="gallery__item" href="${original}">
+    `<a class="gallery__item" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
-</a>
-</div>`;
+</a>`;
 
 const render = () => {
     const list = galleryItems.map((item) => galleryTemplate(item)).join('');
